@@ -1,7 +1,8 @@
 # Caesar Cipher Encryption/Decryption Tool
-![Dalle2_ART](docs/dalle2.png)
-Artwork created by Dalle2 AI 
-
+![Dalle2_ART](docs/dalle2.jpg)
+<p align="right">
+  Artwork created by Dalle2 AI
+</p>
 
 ## Project Overview
 This Python script serves as a Caesar Cipher encryption and decryption tool. The purpose is to encode and decode messages using the basic American Standard Code for Information Interchange (ASCII). The script utilizes the sys package for input handling.
