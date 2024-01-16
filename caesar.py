@@ -2,7 +2,7 @@ import sys
 
 def main(): #first we create a function that we will be using for this project
     print('Welcome to Cesar Cypher encryption system!') #welcome the end user and ask them what they want to do
-    choice = input("First, let's decide what do you want ot do, if you wanna encrypt type <E>, if you want to decrypt a secret message type <D>  ")
+    choice = input("First, let's decide what do you want to do, if you wanna encrypt type <E>, if you want to decrypt a secret message type <D>  ")
     response1 = "E" #define the options, either decrypt or encrypt 
     response2 = "D"
     if choice == response1: #depending on end user response, we will enitiate the sub function. First is encryption
