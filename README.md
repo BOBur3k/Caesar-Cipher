@@ -1,14 +1,14 @@
 # Caesar Cipher Encryption/Decryption Tool
 ![Dalle2_ART](docs/dalle2.jpg)
 <p align="right">
-  Artwork created by Dalle2 AI
+  Artwork created by Dalle 3 AI
 </p>
 
 ## Project Overview
 This Python script serves as a Caesar Cipher encryption and decryption tool. The purpose is to encode and decode messages using the basic American Standard Code for Information Interchange (ASCII). The script utilizes the sys package for input handling.
 
 ## Code Details
-The script employs `if`, `else`, and `elif` functions for handling user choices. The `if` statement checks whether the user wants to encrypt or decrypt the message. If encrypting, it enters the corresponding line of code; if decrypting, it enters another line of code. The `elif` function is used for additional conditions. Additionally, basic `for` loops are used for both encryption and decryption processes. These loops iterate through each character in the input message, applying the Caesar Cipher algorithm. The `ord` function is used to convert characters to their corresponding ASCII values, and the `chr` function is used to convert ASCII values back to characters. The `''.join` function is also utilized to concatenate the characters back into a string, providing a more readable format for the final result.
+The script employs `if`, `else`, and `elif` functions for handling user choices. The `if` statement checks whether the user wants to encrypt or decrypt the message. If encrypting, it enters the corresponding line of code; if decrypting, it enters another line of code. The `elif` function is used for additional conditions. Additionally, basic `for` loops are used for both encryption and decryption processes. These loops iterate through each character in the input message, applying the Caesar Cipher algorithm. The `ord` function is used to convert characters to their corresponding ASCII values, and the `chr` function is used to convert ASCII values back to characters. The `''.join` function is also utilized to concatenate the characters back into a string, providing a more readable format for the final result. To make sure that code can handle big numbers for a key variable, the encoding and decoding code includes functions like `(ord(z)- 32 + key) % 95 + 32` for encoding and `(ord(z)- 32 - key) % 95 + 32` for decoding. Dividing by `95` ensure that our `ord` value will not overflow the limits of ASCII model and adding and subtracting `32` ensure the set limits.  
 
 ## Limitations
 - The encoded message appearance can vary based on the chosen key, potentially resulting in non-alphabetic characters.
