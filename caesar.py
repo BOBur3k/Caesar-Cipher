@@ -1,20 +1,21 @@
 import sys
 
+
 def main(): #first we create a function that we will be using for this project
     print('Welcome to Cesar Cypher encryption system!') #welcome the end user and ask them what they want to do
     choice = input("First, let's decide what do you want to do, if you wanna encrypt type <E>, if you want to decrypt a secret message type <D>  ")
     response1 = "E" #define the options, either decrypt or encrypt 
     response2 = "D"
-    if choice == response1: #depending on end user response, we will enitiate the sub function. First is encryption
-        message = input ("Please type a message to encode: ") #collecting the message 
+    if choice == response1: #depending on end user response, we will initiate the sub function. First is encryption
+        message = input ("Please type a message to encode: ") #collecting the message n
         print("NOTE: PLEASE REMEBER THE FOLLOWING CODE TO DECRYPT THIS MESSAGE LATER") #notifying the end user to remember the key#
         key_input = input("Please insert your desired encryption number: ") #asking end user for a special key number for encryption, user can use any numeric value
         key = int(key_input) #transforming the string formated number to the integer format 
 #encryption begins
         encryption = []
         for z in message: #firsr we launch for loop
-            progress = ord(z) +  key #goal is tranform each letter to the numeric value and then adding the key number.
-            part1 = chr(progress) #afterwards change the numeric values to the charaters 
+            progress = (ord(z)- 32 + key)% 95 + 32 #goal is tranform each letter to the numeric value and then adding the key number.
+            part1 = chr(progress) #afterwards change the numeric values to the charaters
             encryption.append(part1) #placing our answer to the encryption slot 
         result1 = ''.join(encryption) #to make the end message more  apealing and not in a list format we use this function
         print("               ")
@@ -32,7 +33,7 @@ def main(): #first we create a function that we will be using for this project
         key = int(key_input) #changing the format of the key from string to integer
         decryption = [] #here we will place the decrypted message
         for z in message: #for loop activation
-            progress = ord(z) - key #changing every character in the list to the corresponging number and subtracting the key
+            progress = (ord(z)- 32 - key) % 95 + 32  #changing every character in the list to the corresponging number and subtracting the key
             part2 = chr(progress) #changing our numeric values to the corresponding characters
             decryption.append(part2) #placing our results in appropriate slot
         result2 = ''.join(decryption)#making end message more appealing by removing the list format 
