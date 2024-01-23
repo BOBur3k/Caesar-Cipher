@@ -4,9 +4,8 @@ import sys
 def main(): #first we create a function that we will be using for this project
     print('Welcome to Cesar Cypher encryption system!') #welcome the end user and ask them what they want to do
     choice = input("First, let's decide what do you want to do, if you wanna encrypt type <E>, if you want to decrypt a secret message type <D>  ")
-    response1 = "E" #define the options, either decrypt or encrypt 
-    response2 = "D"
-    if choice == response1: #depending on end user response, we will initiate the sub function. First is encryption
+
+    if choice.lower() == "e": #depending on end user response, we will initiate the sub function. First is encryption
         message = input ("Please type a message to encode: ") #collecting the message n
         print("NOTE: PLEASE REMEBER THE FOLLOWING CODE TO DECRYPT THIS MESSAGE LATER") #notifying the end user to remember the key#
         key_input = input("Please insert your desired encryption number: ") #asking end user for a special key number for encryption, user can use any numeric value
@@ -26,7 +25,7 @@ def main(): #first we create a function that we will be using for this project
         return end() #encryption is done and user end up with encrypted message that can be used for decrpytion
     #users will be directed to the end function 
 #decryption beginss
-    elif choice == response2: #if end user choose to decrypt, this code will be initiate 
+    elif choice.lower() == "d": #if end user choose to decrypt, this code will be initiate 
         message = input ("Please type a message to decode: ") #asking to paste the encrypted message
         print("I HOPE YOU SAVED THE ENCRYPTION NUMBER") #reminding the importance of the encryption key
         key_input = input("Please insert your the encryption number: ") #place to put the encryption key
@@ -48,7 +47,7 @@ def main(): #first we create a function that we will be using for this project
 def end():   #end function  
     print(" That's it! if you wanna decode or encode another message, answer to the following message: ")
     final_choice = input("Wanna use Caesar Cypher again? Y/N   ") #giving the choice to encode or decode again
-    if  final_choice == "Y": #if yes we return to the main function 
+    if  final_choice.lower() == "y": #if yes we return to the main function 
         main()
     else: #if use do not wish to continue, we end the program 
         print("Thank you for using Ceaser Cypher encoding tool")
